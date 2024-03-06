@@ -19,9 +19,10 @@ func main() {
 
 	router := chi.NewRouter()
 
-	/*handler := func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Go Web"))
-	}*/
+	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
+
+		w.Write([]byte("Go web"))
+	})
 
 	router.Get("/ping", func(w http.ResponseWriter, r *http.Request) {
 
